@@ -13,13 +13,20 @@
 <body>
     <div class="container header-container">
         <header class="header">
-            <h1 class="header__logo">BLUE<span>BIRDS</span></h1>
+            <a href="index.html">
+                <h1 class="header__logo">BLUE<span>BIRDS</span></h1>
+            </a>
             <nav class="header__nav">
                 <ul class="header__nav-list">
                     <li class="header__nav-list-items"><a href="#" class="header__nav-links">HOME</a></li>
                     <li class="header__nav-list-items"><a href="#" class="header__nav-links">ABOUT</a></li>
                     <li class="header__nav-list-items"><a href="#" class="header__nav-links">SERVICES</a></li>
                 </ul>
+                <div class="header__toggle-nav-list-button">
+                    <div class="header__toggle-nav-list-bars header__toggle-nav-list-bar1"></div>
+                    <div class="header__toggle-nav-list-bars header__toggle-nav-list-bar2"></div>
+                    <div class="header__toggle-nav-list-bars header__toggle-nav-list-bar3"></div>
+                </div>
             </nav>
         </header>
     </div>
@@ -29,13 +36,23 @@
                 <h2 class="hero__subheading">SHOW THE WORLD WHAT YOU GOT</h2>
                 <h1 class="hero__mainheading">We make sure that world sees your work.</h1>
                 <div class="hero__buttons">
-                    <a href="#" class="hero__cto-callUs">CALL US</a>
-                    <a href="#" class="hero__cto-ourWork">OUR WORK</a>
+                    <a href="#" class="hero__button hero__cto-callUs">CALL US</a>
+                    <a href="#" class="hero__button hero__cto-ourWork">OUR WORK</a>
                 </div>
             </div>
             <img src="heroimg.svg" alt="working to show world your talent" class="hero__img">
         </section>
     </div>
+
+    <div class="container footer-container">
+        <footer class="footer">
+            <ul class="footer__list">
+                <li class="footer__list-items"><a href="#" class="footer__list-links">About</a></li>
+                <li class="footer__list-items"><a href="#" class="footer__list-links">Help</a></li>
+            </ul>
+        </footer>
+    </div>
+    <script src="app.js"></script>
 </body>
 
 </html>
