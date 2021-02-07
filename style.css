@@ -237,18 +237,13 @@ a {
   padding: .5rem 1rem;
   border-radius: 50px;
   font-weight: 600;
-  -webkit-transition: opacity var(--transition-time) var(--transition-style);
-  transition: opacity var(--transition-time) var(--transition-style);
-  -webkit-transition: -webkit-transform var(--transition-time) var(--transition-style);
-  transition: -webkit-transform var(--transition-time) var(--transition-style);
-  transition: transform var(--transition-time) var(--transition-style);
-  transition: transform var(--transition-time) var(--transition-style), -webkit-transform var(--transition-time) var(--transition-style);
+  -webkit-transition: opacity var(--transition-time) var(--transition-style), -webkit-transform var(--transition-time) var(--transition-style);
+  transition: opacity var(--transition-time) var(--transition-style), -webkit-transform var(--transition-time) var(--transition-style);
+  transition: transform var(--transition-time) var(--transition-style), opacity var(--transition-time) var(--transition-style);
+  transition: transform var(--transition-time) var(--transition-style), opacity var(--transition-time) var(--transition-style), -webkit-transform var(--transition-time) var(--transition-style);
 }
 
 .hero__button:hover, .hero__button:focus {
-  background-color: var(--black-color--800);
-  color: var(--white-color--600);
-  border-color: var(--black-color--800);
   opacity: 1;
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);

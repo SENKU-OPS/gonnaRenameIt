@@ -7,10 +7,8 @@
     box-sizing: border-box;
 }
 
-@mixin transition($property,
-$trans-time,
-$trans-style) {
-    transition: $property $trans-time $trans-style;
+@mixin transition($property) {
+    transition: $property var(--transition-time) var(--transition-style);
 }
 
 @mixin flex-space-between {
@@ -68,9 +66,7 @@ a {
         background-color: var(--blue-color);
         transform: scaleY(0);
         transform-origin: top;
-        @include transition(transform,
-        var(--transition-time),
-        var(--transition-style));
+        @include transition(transform);
         z-index: 3;
     }
     &__nav-list-items {
@@ -92,9 +88,7 @@ a {
             z-index: -1;
             transform: scaleX(0);
             transform-origin: left;
-            @include transition(transform,
-            var(--transition-time),
-            var(--transition-style));
+            @include transition(transform);
             border-radius: 2rem;
         }
         &:hover::before,
@@ -121,9 +115,7 @@ a {
         background-color: var(--white-color--600);
         margin-bottom: .4rem;
         transform-origin: left;
-        @include transition(transform,
-        var(--transition-time),
-        var(--transition-style));
+        @include transition(transform);
     }
     &__toggle-nav-list-bar3 {
         margin: 0;
@@ -185,17 +177,9 @@ a {
         padding: .5rem 1rem;
         border-radius: 50px;
         font-weight: 600;
-        @include transition(opacity,
-        var(--transition-time),
-        var(--transition-style));
-        @include transition(transform,
-        var(--transition-time),
-        var(--transition-style));
+        transition: transform var(--transition-time) var(--transition-style), opacity var(--transition-time) var(--transition-style);
         &:hover,
         &:focus {
-            background-color: var(--black-color--800);
-            color: var(--white-color--600);
-            border-color: var(--black-color--800);
             opacity: 1;
             transform: translateY(-3px);
         }
@@ -213,7 +197,7 @@ a {
     }
     &__img {
         width: 100%;
-        transition: transform var(--transition-time) var(--transition-style);
+        @include transition(transform);
     }
 }
 
